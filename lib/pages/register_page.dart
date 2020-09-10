@@ -19,7 +19,10 @@ class RegisterPage extends StatelessWidget {
               children: [
                 Logo(titulo: 'Registro'),
                 _Form(),
-                Labels(ruta: 'login', subtitulo: '¿Ya tienes una cuenta?', titulo: 'Inicia sesión'),
+                Labels(
+                    ruta: 'login',
+                    subtitulo: '¿Ya tienes una cuenta?',
+                    titulo: 'Inicia sesión'),
                 Text('Términos y condiciones de uso',
                     style: TextStyle(fontWeight: FontWeight.w200))
               ],
@@ -53,23 +56,20 @@ class __FormState extends State<_Form> {
             textController: nameController,
           ),
           CustomInput(
-            icon: Icons.mail_outline,
-            placeholder: 'Correo',
-            keyboardType: TextInputType.emailAddress,
-            textController: emailController,
-          ),
+              icon: Icons.mail_outline,
+              placeholder: 'Correo',
+              keyboardType: TextInputType.emailAddress,
+              textController: emailController),
           CustomInput(
-            icon: Icons.lock_outline,
-            placeholder: 'Contraseña',
-            isPassword: true,
-            textController: passController,
-          ),
+              icon: Icons.lock_outline,
+              placeholder: 'Contraseña',
+              isPassword: true,
+              textController: passController),
           BotonAzul(
-            onPressed: () {
-              print(emailController.text);
-            },
-            texto: 'Crear',
-          )
+              onPressed: () {
+                print(emailController.text);
+              },
+              texto: 'Crear')
         ],
       ),
     );

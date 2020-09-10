@@ -62,11 +62,12 @@ class __FormState extends State<_Form> {
             textController: passController,
           ),
           BotonAzul(
-            onPressed: () {
-              print(emailController.text);
-            },
-            texto: 'Ingrese',
-          )
+              onPressed: () {
+                print(emailController.text);
+          Navigator.pushReplacementNamed(context, 'usuarios');
+              },
+              texto: 'Ingrese',
+            )
         ],
       ),
     );
